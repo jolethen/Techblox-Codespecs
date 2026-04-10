@@ -1,137 +1,68 @@
-:root {
-    --bg: #0a0a0c;
-    --card: rgba(25, 25, 30, 0.6);
-    --accent: #00ff88; /* Cyber Green */
-    --accent-alt: #00d4ff; /* Tech Blue */
-    --text: #e0e0e0;
-    --border: rgba(255, 255, 255, 0.1);
-}
-
-* { box-sizing: border-box; }
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
 
 body {
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: #000;
+    color: #00ff41; /* Classic Matrix/Terminal Green */
+    font-family: 'Fira Code', monospace;
+    padding: 40px 20px;
     margin: 0;
-    overflow-x: hidden;
+    text-transform: uppercase; /* Makes everything look like a system log */
 }
 
-/* Background Glow Effect */
-.glow-bg {
-    position: fixed;
-    top: -10%;
-    left: -10%;
-    width: 40%;
-    height: 40%;
-    background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
-    z-index: -1;
-}
-
-.container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-
-/* Navigation */
-nav {
-    background: rgba(10, 10, 12, 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.nav-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    max-width: 1000px;
+.terminal {
+    max-width: 800px;
     margin: 0 auto;
+    border: 2px solid #00ff41;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
 }
 
-.logo { font-weight: 800; color: var(--accent); letter-spacing: 2px; }
+h2 {
+    font-size: 1.2rem;
+    margin-top: 30px;
+}
 
-.links a {
-    color: var(--text);
-    text-decoration: none;
+p {
+    color: #fff; /* White text for readability */
     margin-left: 20px;
-    font-size: 0.9rem;
-    transition: 0.3s;
 }
 
-.links a:hover { color: var(--accent); }
-
-/* Header & Glitch Effect */
-header { padding: 80px 0 40px; text-align: center; }
-
-h1 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-    background: linear-gradient(to right, var(--accent), var(--accent-alt));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+hr {
+    border: none;
+    border-top: 1px dashed #00ff41;
+    margin: 20px 0;
 }
 
-.status-bar {
-    display: inline-block;
-    background: #1a1a1e;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-family: monospace;
-    font-size: 0.85rem;
-    border: 1px solid var(--border);
+.file-list {
+    list-style: none;
+    padding-left: 20px;
 }
 
-.pulse {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background: #ff4444;
-    border-radius: 50%;
-    margin-right: 8px;
+.file-list li::before {
+    content: ">> ";
+}
+
+a {
+    color: #00ff41;
+    text-decoration: none;
+    background: transparent;
+    transition: 0.2s;
+}
+
+a:hover {
+    background: #00ff41;
+    color: #000;
+}
+
+.cursor {
     animation: blink 1s infinite;
 }
 
-/* Cards */
-.hero-card {
-    background: var(--card);
-    backdrop-filter: blur(5px);
-    border: 1px solid var(--border);
-    padding: 30px;
-    border-radius: 12px;
-    margin-bottom: 20px;
+@keyframes blink {
+    50% { opacity: 0; }
 }
 
-.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-
-.feature-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    padding: 25px;
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-.feature-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
-}
-
-.icon { font-size: 2rem; margin-bottom: 15px; }
-
-.link-btn {
-    display: inline-block;
-    margin-top: 15px;
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-@keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
-
-/* Mobile View */
 @media (max-width: 600px) {
-    .grid { grid-template-columns: 1fr; }
-    h1 { font-size: 2.5rem; }
-    }
+    .terminal { padding: 15px; }
+    body { font-size: 0.8rem; }
+}
