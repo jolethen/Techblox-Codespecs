@@ -67,7 +67,7 @@ body {
 .data-box .label { font-size: 0.6rem; color: var(--text-dim); }
 .data-box .value { font-weight: bold; color: var(--neon-blue); }
 
-/* Main Frame */
+/* Main Frame Test*/
 .main-frame {
     border: 1px solid var(--border);
     background: rgba(8, 12, 20, 0.5);
