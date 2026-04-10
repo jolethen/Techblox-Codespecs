@@ -1,68 +1,140 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+:root {
+    --bg-main: #0b0e14;
+    --bg-card: #151921;
+    --accent-cyan: #00f2ff;
+    --accent-violet: #7000ff;
+    --text: #e0e6ed;
+    --border: #2d3545;
+}
 
 body {
-    background-color: #000;
-    color: #00ff41; /* Classic Matrix/Terminal Green */
-    font-family: 'Fira Code', monospace;
-    padding: 40px 20px;
+    background-color: var(--bg-main);
+    color: var(--text);
+    font-family: 'Segoe UI', Roboto, sans-serif;
     margin: 0;
-    text-transform: uppercase; /* Makes everything look like a system log */
+    overflow-x: hidden;
 }
 
-.terminal {
-    max-width: 800px;
-    margin: 0 auto;
-    border: 2px solid #00ff41;
+/* Futuristic Scanline Effect */
+.scanline {
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+    background: linear-gradient(0deg, rgba(0, 242, 255, 0.05) 0%, transparent 100%);
+    position: fixed;
+    animation: scan 4s linear infinite;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Side Navigation Labels */
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid var(--border);
+    padding-right: 20px;
+}
+
+.nav-item {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    transform: rotate(-90deg);
+    color: var(--border);
+}
+
+.nav-item.active { color: var(--accent-cyan); text-shadow: 0 0 10px var(--accent-cyan); }
+
+/* Header Bricks */
+.main-header {
+    flex-grow: 1;
+    padding-left: 40px;
+}
+
+.glitch-text {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    color: #fff;
+    display: block;
+}
+
+.status-box {
+    border-left: 3px solid var(--accent-violet);
+    padding-left: 15px;
+    margin-top: 20px;
+}
+
+.loading-bar {
+    width: 150px;
+    height: 4px;
+    background: var(--border);
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.loading-bar::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background: var(--accent-violet);
+    box-shadow: 0 0 10px var(--accent-violet);
+}
+
+/* Content Blocks */
+.info-block {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    clip-path: polygon(0 0, 95% 0, 100% 15%, 100% 100%, 5% 100%, 0 85%);
     padding: 30px;
-    box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+    margin-top: 40px;
 }
 
-h2 {
-    font-size: 1.2rem;
-    margin-top: 30px;
+.angle-header {
+    color: var(--accent-cyan);
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
 }
 
-p {
-    color: #fff; /* White text for readability */
-    margin-left: 20px;
+/* Action Cards */
+.lower-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-hr {
-    border: none;
-    border-top: 1px dashed #00ff41;
-    margin: 20px 0;
-}
-
-.file-list {
-    list-style: none;
-    padding-left: 20px;
-}
-
-.file-list li::before {
-    content: ">> ";
-}
-
-a {
-    color: #00ff41;
+.action-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 20px;
     text-decoration: none;
-    background: transparent;
-    transition: 0.2s;
+    color: inherit;
+    position: relative;
+    transition: 0.3s;
 }
 
-a:hover {
-    background: #00ff41;
-    color: #000;
+.action-card.cyan:hover { border-color: var(--accent-cyan); box-shadow: 0 0 20px rgba(0, 242, 255, 0.1); }
+.action-card.violet:hover { border-color: var(--accent-violet); box-shadow: 0 0 20px rgba(112, 0, 255, 0.1); }
+
+.card-label { font-size: 0.6rem; color: var(--border); margin-bottom: 10px; }
+
+@keyframes scan {
+    from { top: -100px; }
+    to { top: 100vh; }
 }
 
-.cursor {
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    50% { opacity: 0; }
-}
-
-@media (max-width: 600px) {
-    .terminal { padding: 15px; }
-    body { font-size: 0.8rem; }
-}
+@media (max-width: 768px) {
+    .container { flex-direction: column; }
+    .side-nav { flex-direction: row; border-right: none; border-bottom: 1px solid var(--border); padding: 10px; }
+    .nav-item { transform: none; margin: 0 15px; }
+    .glitch-text { font-size: 2.5rem; }
+    }
