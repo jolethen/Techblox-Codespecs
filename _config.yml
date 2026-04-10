@@ -1,0 +1,23 @@
+# Doc config
+title: Techblox Developer Archive
+description: Blueprints and roadmap for the voxel MMORPG. Community-maintained.
+theme: jekyll-theme-cayman
+
+
+show_downloads: true
+google_analytics: 
+
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+
+navbar:
+  - text: "Home"
+    href: "/"
+  - text: "Roadmap 2027"
+    href: "/roadmap"
+  - text: "GitHub"
+    href: "https://github.com/your-username/techblox-site"
