@@ -2,43 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TECHBLOX_LOGS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHBLOX // SYSTEM_ARCHIVE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="terminal">
-        <header>
-            [ ARCHIVE_ID: TB-2027 ]<br>
-            [ USER: DEV_COMMUNITY ]<br>
-            [ STATUS: STUDY_MODE_ACTIVE ]
-            <hr>
+    <div class="scanline"></div>
+    
+    <div class="container">
+        <nav class="side-nav">
+            <div class="nav-item active">01_CORE</div>
+            <div class="nav-item">02_MAP</div>
+            <div class="nav-item">03_SRC</div>
+        </nav>
+
+        <header class="main-header">
+            <div class="corner-top"></div>
+            <div class="branding">
+                <span class="glitch-text">TECHBLOX</span>
+                <span class="version">v2.0.27</span>
+            </div>
+            <div class="status-box">
+                <div class="loading-bar"></div>
+                <p>ACADEMIC_STUDY_LOCKOUT: ACTIVE</p>
+            </div>
         </header>
 
-        <section id="vision">
-            <h2>> _THE_VISION</h2>
-            <p>High-performance voxel MMORPG. Scalable Lua architecture. Community-driven future.</p>
-        </section>
+        <main class="content-grid">
+            <section class="info-block">
+                <h2 class="angle-header">PROJECT_IDENTITY</h2>
+                <div class="inner-content">
+                    <p>High-performance voxel engine designed for the next generation of MMORPGs. Optimized for Lua-based entity management and procedural generation.</p>
+                </div>
+            </section>
 
-        <section id="directory">
-            <h2>> _DIRECTORY</h2>
-            <ul class="file-list">
-                <li><a href="roadmap.html">ROADMAP.TXT</a></li>
-                <li><a href="https://github.com">SOURCE_CODE.EXE</a></li>
-                <li><a href="tech.html">SERVER_LOGIC.CFG</a></li>
-            </ul>
-        </section>
-
-        <section id="console">
-            <h2>> _CONSOLE</h2>
-            <div class="command-line">
-                <span class="prompt">$</span> <span class="typing">awaiting_community_input...</span><span class="cursor">_</span>
+            <div class="lower-grid">
+                <a href="roadmap.html" class="action-card cyan">
+                    <div class="card-label">FILE_01</div>
+                    <h3>ROADMAP_2027</h3>
+                    <div class="arrow">>></div>
+                </a>
+                <a href="https://github.com" class="action-card violet">
+                    <div class="card-label">FILE_02</div>
+                    <h3>GITHUB_REPOS</h3>
+                    <div class="arrow">>></div>
+                </a>
             </div>
-        </section>
-
-        <footer>
-            <hr>
-            LICENCE: CC_BY_4.0 // NO_TRESPASSING_EXCEPT_DEVS
-        </footer>
+        </main>
     </div>
 </body>
 </html>
