@@ -95,4 +95,18 @@ Any violation of these rules can lead to immediate termination and deletion of y
 
 The owner of the hosting service has the right to have all privileges ingame aswell as a role on their discord
 
-**Important:-** Please rely on these rules loosely, and ask our hoster for the original set of rules as this ruleset is only updated by the date of **11th April 2026**
+**Important:** Please rely on these rules loosely, and ask our hoster for the original set of rules as this ruleset is only updated by the date of **11th April 2026**
+
+
+
+# Managing the server
+By managing the server i mean the things I learnt one must know before hosting one or using a panel.
+So you must know basic things like:
+
+- How to add mods;
+- How to manage mod dependencies as they can lead towards infinite crash loops;
+- How to properly remove or add a mod;
+- How to remove a mods dataset/database;
+- Use only trusted mods;
+- 
+
