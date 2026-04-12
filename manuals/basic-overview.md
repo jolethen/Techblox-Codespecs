@@ -108,5 +108,10 @@ So you must know basic things like:
 - How to properly remove or add a mod;
 - How to remove a mods dataset/database;
 - Use only trusted mods;
-- 
+- Dont add any mod without its dependencies
+- Always add mods in worldmods, this way u dont need to load it in manually
+- Teamwork is an essential skill, if you are in this server and have privileges to this extent that u can delete the whole server it means something, it means you have some important position in the server and not just some random shit position which u leave after keeping a look of after a month or two. This journey will take you to your all highs up and lows as low as hell
+- Managing a server is also about patience, you dont have patience then you cany achieve anything and if u cant have these qualities its better to have someone else someone whos better then you, there is no shortage of passionate people
+- Always be ready to dumo your hard work in trash this journey is soo fked that sometimes you'll work months on a single project and the community will want it but when u make it, give it your best the community will hate it. In such scenarios you do nothing just take a week or two break while updating very basic things This'll give you time to refresh up dont make the break more then 2 weeks as the second passed of two week mark break you will never ever return to developing mods or doing anything for the server, trust me i have gone thru the same previously but then i learnt this is what fucking happens one day, everything ends one day you cant run a great server forever it needs a restart
+- Take restarts as your beacons of motivation, restart isnt just you starting something new restart means starting from the ground up doing the stuff again you already did, never fear from a reset. LEARN from it, LEARN what you did wrong, LEARN where the community fell apart. These stuff will happen you just not have to giveup and give it ur best and then if the community doesn't likes it, either you dont have enough passion or the community you're in is wrong; GO and search for a new better community which YOU truly love. Youre a great coder probably you'll fit anywhere just some passion and glasses of coffee are needed to keep the light on
 
